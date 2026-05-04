@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gambling Society</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='/assets/images/logo/favicon.png') }}"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="{{ url_for('static', filename='assets/images/logo/logo.png') }}"
+        alt="Gambling Society Logo"
+        class="logoHeader"
+      />
+      <div class="navbar">
+        <a href="/"
+          ><div class="nav">
+            <img
+              class="navImage"
+              src="{{ url_for('static', filename='assets/images/icons/home.svg') }}"
+              alt="Home"
+            />
+            <div class="navText selectedNavText">HOME</div>
+          </div></a
+        >
+        <a href="/blog"
+          ><div class="nav">
+            <img
+              class="navImage"
+              src="{{ url_for('static', filename='assets/images/icons/blog.svg') }}"
+              alt="Blog"
+            />
+            <div class="navText">BLOG</div>
+          </div></a
+        >
+        <a href="/dashboard"
+          ><div class="nav">
+            <img
+              class="navImage"
+              src="{{ url_for('static', filename='assets/images/icons/dashboard.svg') }}"
+              alt="Dashboard"
+            />
+            <div class="navText">DASHBOARD</div>
+          </div></a
+        >
+        <a href="/games"
+          ><div class="nav">
+            <img
+              class="navImage"
+              src="{{ url_for('static', filename='assets/images/icons/games.svg') }}"
+              alt="Games"
+            />
+            <div class="navText">GAMES</div>
+          </div></a
+        >
+      </div>
+      <div class="loginDiv">
+        <a href="/signin">
+          <button class="signIn">SIGN IN</button>
+        </a>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="content">
+        <div class="full">
+          <div class="half">
+            <h1 class="title">ABOUT US</h1>
+            <p>
+              Gambling Society is a group for people wanting to play for fun and
+              with <b>lower stakes</b>. <br /><br />
+
+              Our website lets you <b>track and monitor</b> your gambling, so
+              that you can learn and improve. <br /><br />
+              - We help you track your gambling sessions clearly and easily
+              <br />
+              - We log wins, losses, streaks, and achievements
+              <br />
+              - You can see your progress with clean stats
+              <br /><br />
+              We are sponsored by <b>BIG TURTLE INDUSTRIES</b>, a weapons
+              production company. We are grateful to receive funding from them
+              to cover costs in order to keep this initiative going.
+            </p>
+          </div>
+
+          <div class="half">
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/cards image.png')}}"
+              alt="Cards Image"
+              class="img"
+            />
+          </div>
+        </div>
+        <div class="full">
+          <div class="half" style="width: 40%">
+            <img
+              style="
+                margin-top: 12vh;
+                margin-bottom: 6vh;
+                width: 90%;
+                margin-left: 5%;
+              "
+              src="{{url_for('static', filename='assets/images/homepage/chips image.png')}}"
+              alt="Chips Image"
+              class="img"
+            />
+          </div>
+          <div class="half" style="width: 55%">
+            <h1 class="title">GAMBLER OF THE WEEK</h1>
+            <p>
+              This week’s gambler of the week is <b>David Pham</b>! <br /><br />
+              Selected for his consistent performace and domination of the
+              gambling table on Big 2 Tuesdays. <br /><br />
+              Congratulations David, you have made Big Turtle proud!
+            </p>
+          </div>
+        </div>
+        <div class="full">
+          <div class="half">
+            <h1 class="title">OUR SPONSORS</h1>
+            <h2>Big Turtle Industries</h2>
+            <p>
+              <b>Founded:</b> 1983, Birmingham <br />
+              <b>UK Headquarters:</b> BT Tower, Birmingham <br />
+              <b>Company Objective:</b> BTI is involved in the development and
+              production of military aerospace systems and aircraft, as well as
+              missile technology. Recently, the company has launched a new
+              branch, the BTI Space Program, which has so far been highly
+              successful, and has managed to construct several successful
+              satellites and a space station. <br />
+              <b>Employees:</b> ~42,000 <br />
+              <b>Worldwide Annual Revenue:</b> $18.6 Trillion
+            </p>
+          </div>
+          <div class="half">
+            <img
+              style="margin-top: 6vh"
+              src="{{url_for('static', filename='assets/images/homepage/BTI.png')}}"
+              alt="Big Turtle Industries Weapons test"
+              class="img rounded"
+            />
+          </div>
+        </div>
+        <div class="full">
+          <div class="half">
+            <img
+              style="margin-top: 2vh"
+              src="{{url_for('static', filename='assets/images/homepage/Hevington.png')}}"
+              alt="Hevington Aerospace Corporation"
+              class="img rounded"
+            />
+          </div>
+          <div class="half">
+            <h2>Hevington Aerospace Corporation</h2>
+            <p>
+              <b>Founded:</b> 1976, Birmingham <br />
+              <b>UK Headquarters:</b> Hevington Office, Birmingham, Curzon
+              <br />
+              <b>Company Objective:</b> Hevington Aerospace Corporation
+              specializes in the manufacturing of advanced commercial and
+              military aircraft, propulsion technology, and recently, satellite
+              and rocket components. The company is also heavily involved in
+              research and development of next-generation flight systems and
+              orbital infrastructure. <br />
+              <b>Employees:</b> ~38,000 <br />
+              <b>Worldwide Annual Revenue:</b> $12.4 Trillion
+            </p>
+          </div>
+        </div>
+        <div class="full">
+          <h1
+            class="title"
+            style="
+              color: var(--blue);
+              box-shadow: none;
+              background-color: white;
+            "
+          >
+            Full List of Sponsors:
+          </h1>
+          <div id="sponsors">
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Proton.png')}}"
+              class="sponsorImg"
+            />
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/SCWL.png')}}"
+              class="sponsorImg"
+            />
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/BTI.png')}}"
+              class="sponsorImg"
+            />
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Hevington.png')}}"
+              class="sponsorImg"
+            />
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Redline.png')}}"
+              class="sponsorImg"
+            />
+            <img
+              src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Meeteor.png')}}"
+              class="sponsorImg"
+            />
+          </div>
+        </div>
+
+        <div class="full" style="margin-top: 6vh">
+          <h1 class="title">TERMS & CONDITIONS</h1>
+          <p class="full">
+            This group engages in simulated gaming activities mimicking games of
+            chance purely for entertainment, recreational, or social purposes.
+            <br />
+            Under no circumstances does the group participate in, facilitate, or
+            promote actual gambling, betting, or wagering involving monetary or
+            other valuables.
+            <br /><br />
+            The games and interactions are devoid of real-world financial
+            implications, lack monetary exchange or prize distribution, and are
+            not intended to constitute genuine gambling activities as defined by
+            applicable laws.
+            <br />
+            Participation is undertaken with the understanding that these are
+            hypothetical and for amusement only, serving purposes like social
+            interaction or strategy discussion.
+            <br /><br />
+            Members are reminded these engagements are separate from actual
+            gambling, involve no real stakes or financial risk, and adherence to
+            laws regarding actual gambling rests solely with individuals.
+            <br />By associating with this group, individuals acknowledge the
+            entertainment-based and non-monetary nature of the activities.
+            <br /><br />
+            -Big Turtle(Founder)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="first">
+        <div
+          class="half"
+          style="
+            height: 70%;
+            width: 49.91%;
+            margin-bottom: 0px;
+            border-bottom: var(--blue) solid 1px;
+          "
+        >
+          <img
+            src="{{url_for('static', filename='assets/images/logo/logo.png')}}"
+            class="img"
+            style="margin-top: 12%"
+          />
+        </div>
+        <div
+          class="half"
+          style="
+            height: 70%;
+            margin-bottom: 0px;
+            border-bottom: var(--blue) solid 1px;
+            border-left: 1px var(--blue) solid;
+          "
+        >
+          <p class="footerText">Terms and conditions PDF</p>
+          <p class="footerText">Blunderbirds Link</p>
+          <p class="footerText">The Lore documentation</p>
+          <p class="footerText">General Rocketry Information</p>
+        </div>
+        <div class="full">
+          <h2
+            style="
+              width: 100%;
+              margin: 0px;
+              margin-top: 5vh;
+              text-align: center;
+              color: var(--blue);
+            "
+          >
+            © 2026 Gambling Society — All rights reserved.
+          </h2>
+        </div>
+      </div>
+
+      <div class="last">
+        <img
+          style="margin-left: 20%; width: 60%; float: left"
+          src="{{url_for('static', filename='assets/images/homepage/sponsor logos/BTI.png')}}"
+          class="img bti"
+        />
+        <img
+          src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Hevington.png')}}"
+          class="img"
+          style="width: 30%; float: left; margin-left: 10%; margin-right: 10%"
+        />
+        <img
+          src="{{url_for('static', filename='assets/images/homepage/sponsor logos/Meeteor.png')}}"
+          class="img"
+          style="width: 30%; float: left; margin-left: 10%; margin-right: 10%"
+        />
+      </div>
+    </div>
+  </body>
+</html>

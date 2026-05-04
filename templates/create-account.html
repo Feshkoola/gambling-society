@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='/assets/images/logo/favicon.png') }}"
+    />
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <div class="auth-box">
+        <div class="auth-title">Create Account</div>
+
+        <form action="/create-account" method="POST" id="createAccountForm">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            class="auth-input"
+            required
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="auth-input"
+            required
+          />
+
+          <button type="submit" class="auth-btn">Create Account</button>
+        </form>
+
+        <div class="switch-text">
+          Already have an account?
+          <a href="/signin" class="switch-link">Log in</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

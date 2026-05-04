@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Gambling Society</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ url_for('static', filename='/assets/images/logo/favicon.png') }}"
+    />
+  </head>
+
+  <body>
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2 class="auth-title">Welcome Back</h2>
+        <form action="/signin" method="POST" id="createAccountForm">
+          <input
+            type="text"
+            id="login-username"
+            class="auth-input"
+            placeholder="Username"
+            name="username"
+          />
+          <input
+            type="password"
+            id="login-password"
+            class="auth-input"
+            placeholder="Password"
+            name="password"
+          />
+
+          <button type="submit" id="login-btn" class="auth-btn">Login</button>
+        </form>
+
+        <p class="switch-text">
+          Don't have an account?
+          <a href="/create-account" class="switch-link"
+            ><span id="show-register" class="switch-link">Create one</span></a
+          >
+        </p>
+      </div>
+
+      <div class="auth-box hidden" id="register-box">
+        <h2 class="auth-title">Create Account</h2>
+
+        <input
+          type="text"
+          id="register-username"
+          class="auth-input"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          id="register-password"
+          class="auth-input"
+          placeholder="Password"
+        />
+        <input
+          type="password"
+          id="register-confirm"
+          class="auth-input"
+          placeholder="Confirm Password"
+        />
+
+        <button id="register-btn" class="auth-btn">Create Account</button>
+
+        <p class="switch-text">
+          Already have an account?
+          <span id="show-login" class="switch-link">Login</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
